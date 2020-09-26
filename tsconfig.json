@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {    
+    "target": "es5",
+    "module": "commonjs",
+    "jsx": "react",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "removeComments": false,
+    "forceConsistentCasingInFileNames": false,
+    "strictNullChecks": false,
+    "noImplicitThis": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist"
+  ],
+}
