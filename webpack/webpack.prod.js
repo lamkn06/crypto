@@ -27,8 +27,8 @@ module.exports = () => {
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         inject: true,
-        title: 'Digi Flow',
-        favicon: path.join(__dirname, '../src/assets/images/favicon.png'),
+        title: 'Cryton',
+
         template: path.join(__dirname, '../src/index.ejs'),
         env: 'production',
         minify: {

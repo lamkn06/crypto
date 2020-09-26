@@ -66,7 +66,6 @@ module.exports = (env) => {
       new HtmlWebpackPlugin({
         inject: true,
         title: 'Digi Flow',
-        favicon: path.join(__dirname, '../src/assets/images/favicon.png'),
         template: path.join(__dirname, '../src/index.ejs'),
         env: JSON.stringify(env),
       }),

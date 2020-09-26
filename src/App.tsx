@@ -3,9 +3,9 @@ import '@trueprofile.io/ui/build/assets/css/normalize.css';
 import '@trueprofile.io/ui/build/assets/css/global.css';
 import 'react-datepicker/dist/react-datepicker.css';
 import 'react-perfect-scrollbar/dist/css/styles.css';
+import './assets/css/reset.css';
 import './assets/css/font.css';
 import './assets/css/global.scss';
-import './assets/css/datepicker.scss';
 
 import { observer } from 'mobx-react';
 import React, { Suspense } from 'react';

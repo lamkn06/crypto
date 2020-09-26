@@ -13,7 +13,7 @@ const webpackConfig = require('../../webpack/webpack.dev.js');
 
 const handleProxyRequest = require('./proxy');
 const user = require('./user');
-const snapshot = require('./snapshot');
+
 const env = process.env.NODE_ENV;
 
 try {
@@ -36,13 +36,12 @@ try {
     )
   );
 
-  app.post('/snapshot', (req, res, next) => {
-    return snapshot(req, res, process.env.SETTINGS_API_DOMAIN);
-  });
-
   if (env !== 'production') {
     const compiler = webpack(webpackConfig(env));
-    const devMiddleware = WebpackDevMiddleware(compiler);
+    const devMiddleware = WebpackDevMiddleware(compiler, {
+      noInfo: true,
+      publicPath: webpackConfig(env).output.publicPath,
+    });
     const hotMiddleware = WebpackHotMiddleware(compiler);
 
     app.use(history());
